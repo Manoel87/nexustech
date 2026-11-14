@@ -428,7 +428,6 @@ h3 { font-size: 1.2rem; font-weight: 600; line-height: 1.3; }
 
 .grid-projects { display: grid; grid-template-columns: repeat(6, 1fr); gap: 24px; }
 .project { grid-column: span 2; padding: 0; overflow: hidden; display: flex; flex-direction: column; }
-.project:nth-child(n+4) { grid-column: span 3; }
 .project-media { position: relative; aspect-ratio: 16 / 10; overflow: hidden; background: linear-gradient(135deg, #0C1B36, #07101F); border-bottom: 1px solid var(--border); }
 .project-media::before { content: ""; position: absolute; inset: 0 0 auto 0; height: 26px; background: rgba(0, 229, 255, .05); border-bottom: 1px solid var(--border); }
 .project-media::after { content: ""; position: absolute; top: 9px; left: 12px; width: 48px; height: 8px;
@@ -447,11 +446,9 @@ h3 { font-size: 1.2rem; font-weight: 600; line-height: 1.3; }
 @media (max-width: 960px) {
   .grid-projects { grid-template-columns: repeat(2, 1fr); }
   .project, .project:nth-child(n+4) { grid-column: span 1; }
-  .project:last-child { grid-column: 1 / -1; }
 }
 @media (max-width: 560px) {
   .grid-projects { grid-template-columns: 1fr; }
-  .project:last-child { grid-column: auto; }
 }
 
 /* ---------- Logo e navbar (versão limpa) ---------- */

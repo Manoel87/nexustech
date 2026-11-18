@@ -570,7 +570,7 @@ h3 { font-size: 1.2rem; font-weight: 600; line-height: 1.3; }
   background: radial-gradient(60% 60% at 50% 45%, rgba(0, 150, 255, .22), transparent 75%), linear-gradient(135deg, #0C1B36, #07101F);
 }
 .avatar-ph + img { position: absolute; inset: 0; z-index: 2; }
-@media (max-width: 700px) { .team-grid { grid-template-columns: 1fr; } }
+
 
 /* Projetos: filtro de categoria */
 .filter-bar { display: flex; flex-wrap: wrap; gap: 10px; margin: -24px 0 36px; }
@@ -625,4 +625,23 @@ h3 { font-size: 1.2rem; font-weight: 600; line-height: 1.3; }
 /* Celular deitado (paisagem): hero não ocupa mais que a tela */
 @media (max-height: 520px) and (orientation: landscape) {
   .hero { min-height: auto; padding-bottom: 72px; }
+}
+
+/* ================= Sobre Nós: sócios sempre lado a lado ================= */
+.team-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+
+@media (max-width: 700px) {
+  .team-grid { gap: 12px; }
+  .team-card { padding: 12px 12px 16px; border-radius: 16px; }
+  .team-card .about-photo { max-width: 100%; margin-bottom: 14px; border-radius: 14px; }
+  .team-card .photo-badge { left: 6px; right: 6px; bottom: 6px; padding: 6px 8px; gap: 6px; border-radius: 10px; }
+  .team-card .photo-badge small { display: none; }
+  .team-card .photo-badge strong { font-size: .6rem; line-height: 1.25; }
+  .team-card .photo-badge .pulse-dot { width: 6px; height: 6px; flex: none; }
+  .avatar-ph { font-size: 2.4rem; }
+  .team-card h3 { font-size: 1.02rem; }
+  .team-role { font-size: .74rem !important; margin-bottom: 8px; line-height: 1.35; }
+  .team-bio { font-size: .76rem !important; line-height: 1.55; }
+  .team-card .tags { gap: 5px; padding-top: 12px; }
+  .team-card .tag { font-size: .56rem; padding: 3px 7px; letter-spacing: .03em; }
 }
